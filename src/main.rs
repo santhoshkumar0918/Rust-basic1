@@ -81,14 +81,152 @@
 //     println!("Likes Games: {}", likes_games);
 // }
 
-fn main() {
-let value = 0;
-if value > -10 && value < 10 {
-    println!("Single digit!");
-} else {
-    println!("Multiple digits!");
+// fn main() {
+// let value = 0;
+// if value > -10 && value < 10 {
+//     println!("Single digit!");
+// } else {
+//     println!("Multiple digits!");
+// }
+// }
+
+// fn main() {
+
+// let meal = Meal::Hamburger {
+//     vegetarian: true,
+// };
+
+// if let Meal::Hamburger { vegetarian: true } = meal {
+//     println!("I had a vegetarian hamburger!");
+// }
+// }
+
+// fn main() {
+// for n in 0..=5 {
+//     match n {
+//         1 => println!("It was one!"),
+//         2 => println!("It was two!"),
+//         // or-pattern
+//         3 | 4 => println!("It was a bit more than two!"),
+//         6 => println!("vdksv v"),
+//         high if high >= 5 => println!("It was a high number!"),
+//         // a pattern consisting only of the name `other`
+//         other => println!("It was {other}!"),
+//     }
+// }
+// }
+
+// fn main(){
+//  for  n in 0..=5{
+//     match n {
+//         1 => println!("it was  one"),
+//         3 => println!("it was a  two"),
+//         6 => println!("it was a  error "),
+//         5 => println!("it was a  correct and high number"),
+//         7 => println!("jbc "),
+
+//         high if high >= 8 => println!("ccjshch "),
+//         other => println!("it was {other}")
+//     }
+//  }
+// }
+
+
+// fn main() {
+// enum Meal {
+//     FishAndChips { chip_proportion: f64 },
+//     Hamburger { vegetarian: bool },
+// }
+
+// let meal = Meal::FishAndChips {
+//     chip_proportion: 0.6,
+// };
+
+// let meal = Meal::Hamburger { vegetarian: true };
+
+// match meal {
+//     Meal::FishAndChips { chip_proportion } => {
+//         if chip_proportion > 0.5 {
+//             println!("I had some fish and plenty of chips!");
+//         } else if chip_proportion < 0.5 {
+//             println!("I had plenty of fish and some chips!");
+//         } else {
+//             println!("I had fish and chips!");
+//         }
+//     }
+//     Meal::Hamburger { vegetarian } => {
+//         if vegetarian {
+//             println!("I had a vegetarian hamburger!");
+//         } else {
+//             println!("I had a meaty hamburger!");
+//         }
+//     }
+// }
+// }
+
+
+// #![allow(unused)]
+// fn main() {
+// enum Meal {
+//     FishAndChips { chip_proportion: f64 },
+//     Hamburger { vegetarian: bool },
+// }
+
+// let meal = Meal::Hamburger { vegetarian: true } ;
+//   let meal = Meal::FishAndChips { chip_proportion: 0.6 };
+
+// match meal {
+//     Meal::FishAndChips { chip_proportion } if chip_proportion > 0.5 => {
+//         println!("I had some fish and plenty of chips!");
+//     }
+//     Meal::FishAndChips { chip_proportion } if chip_proportion < 0.5 => {
+//         println!("I had plenty of fish and some chips!");
+//     }
+//     Meal::FishAndChips { chip_proportion } => {
+//         println!("I had fish and chips!");
+//     }
+//     Meal::Hamburger { vegetarian: true } => {
+//         println!("I had a vegetarian hamburger!");
+//     }
+//     Meal::Hamburger { vegetarian: false } => {
+//         println!("I had a meaty hamburger!");
+//     }
+// }
+// }
+
+
+fn main(){
+    enum Meal {
+        FishAndChips {chips_production : f64},
+        Hamburger {vegeterian : bool},
+    }
+
+    // let mut meal  = Meal::FishAndChips { chips_production: 0.8 };
+    let mut meal = Meal::Hamburger { vegeterian: true };
+
+   while let Meal::Hamburger { vegeterian } = meal {
+       println!("Going to have fish with chips {:.2}...",vegeterian);
+
+       if vegeterian > false {
+        meal =  Meal::Hamburger  {  vegeterian : true };
+
+       }
+       else {
+           meal = Meal::Hamburger { vegeterian: false }
+       }
+
+   }
+   
+       println!("i am done with both fishchips and veg")
 }
-}
+
+
+
+
+
+
+
+
 
 
 
