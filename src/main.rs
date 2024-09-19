@@ -245,21 +245,33 @@
 // println!("{x}")
 // }
 
-fn main (){
-    struct  Sa (&'static str);
-        impl Sa {
-            fn associated_fn() -> &'static str{
-                " talent X hardwork"
-            }
+// fn main (){
+//     struct  Sa (&'static str);
+//         impl Sa {
+//             fn associated_fn() -> &'static str{
+//                 " talent X hardwork"
+//             }
 
-            fn method(self : &Self) -> &'static str {
-                self.0
-            }
-        }
-    println!("{}",Sa::associated_fn());
+//             fn method(self : &Self) -> &'static str {
+//                 self.0
+//             }
+//         }
+//     println!("{}",Sa::associated_fn());
 
-    let instance = Sa("my  value depends on Sa func.");
-    println!("{}",instance.method());
+//     let instance = Sa("my  value depends on Sa func.");
+//     println!("{}",instance.method());
+// }
+
+fn main(){
+//    let c = |x| {
+//     x * 2
+// };
+// println!("{}",c(3));
+
+
+let a  = [2,3,4];
+let n : i32  = a.iter().map(|x| x * 3 ).sum();
+println!("sum of {:?}vvdv{}",a,n);
 }
 
 
