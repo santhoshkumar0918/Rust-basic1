@@ -275,20 +275,46 @@
 // }
     
 
-    fn main(){
-        let is_hello : bool = false;
-        let is_mello: bool = false;
+    // fn main(){
+    //     let is_hello : bool = false;
+    //     let is_mello: bool = false;
         
-        if is_hello {
-            println!("hello male");
-        }
-        else {
-            println!("hello female")
-        }
-        if is_hello && is_mello {
-            print!("legal")
-        }
-    }
+    //     if is_hello {
+    //         println!("hello male");
+    //     }
+    //     else {
+    //         println!("hello female")
+    //     }
+    //     if is_hello && is_mello {
+    //         print!("legal")
+    //     }
+    // }
+ struct User {
+    name: String,
+    age: u64,
+    email: String,
+    your_skills_count: u64,
+    active: bool,
+}
+
+fn main() {
+    let user1 = User {
+        name: String::from("ssss"),
+        age: 18,
+        email: String::from("santhos@gmail.com"),
+        your_skills_count: 5,
+        active: true,
+    };
+    
+    // Using {} instead of {:?} for string type
+    println!("User1 username: {}", user1.name);
+        println!("User1 age: {}", user1.age);
+    println!("User1 email: {}", user1.email);
+        println!("User1 skills: {}", user1.your_skills_count);
+    println!("User1 active: {}", user1.active);
+
+}
+
 
 
 
