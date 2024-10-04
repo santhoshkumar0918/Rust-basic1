@@ -288,34 +288,92 @@
     //     if is_hello && is_mello {
     //         print!("legal")
     //     }
-    // }
- struct User {
-    name: String,
-    age: u64,
-    email: String,
-    your_skills_count: u64,
-    active: bool,
-}
+//     // }
+//  struct User {
+//     name: String,
+//     age: u64,
+//     email: String,
+//     your_skills_count: u64,
+//     active: bool,
+// }
 
-fn main() {
-    let user1 = User {
-        name: String::from("ssss"),
-        age: 18,
-        email: String::from("santhos@gmail.com"),
-        your_skills_count: 5,
-        active: true,
-    };
+// fn main() {
+//     let user1 = User {
+//         name: String::from("ssss"),
+//         age: 18,
+//         email: String::from("santhos@gmail.com"),
+//         your_skills_count: 5,
+//         active: true,
+//     };
     
-    // Using {} instead of {:?} for string type
-    println!("User1 username: {}", user1.name);
-        println!("User1 age: {}", user1.age);
-    println!("User1 email: {}", user1.email);
-        println!("User1 skills: {}", user1.your_skills_count);
-    println!("User1 active: {}", user1.active);
+//     // Using {} instead of {:?} for string type
+//     println!("User1 username: {}", user1.name);
+//         println!("User1 age: {}", user1.age);
+//     println!("User1 email: {}", user1.email);
+//         println!("User1 skills: {}", user1.your_skills_count);
+//     println!("User1 active: {}", user1.active);
 
+// }
+
+
+
+// // Recapping Part 1
+// Q. Write a function is_even that takes a number as an input
+// and returns true if it is even
+
+
+// fn main(){
+//     println!("{}",is_even(31))
+// }
+// fn is_even(num : i32) -> bool{
+//    if num % 2 == 0 {
+//     return  true;
+//    }else {
+//        return false;
+//    }
+// }
+
+
+// Recapping Part 1
+// Q. Write a function fib that finds the fibbonacci of a number
+// it takes as input
+
+// use std::result;
+
+// fn main(){
+//     let x : i32 = 1;
+//     print!("{}",x);
+
+//     let num = 10;
+//     let result = fib(num);
+//     println!("Fibonaacci series of {} is {}",num,result);
+// }
+// fn fib(num  : i32) -> i32{
+//     let mut first = 0;
+//     let mut second = 1;
+//     if num == 0 {
+//         return first;
+//     }
+//     if num == 1{
+//         return second ;
+//     }
+//     for _ in 1..=num - 2 {
+//         let temp = second;
+//         second = second + first;
+//         first  = temp;
+//     }
+//     return  second;
+// }
+
+fn get_string_length(s : &str) -> usize{
+s.chars().count()
 }
 
-
+fn main(){
+let my_string = String::from("Hello  fworld");
+let length = get_string_length(&my_string);
+println!("length is : {}", length);
+}
 
 
 
