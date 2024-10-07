@@ -404,30 +404,57 @@
 
 
 
-    enum Cricket {
-        Bat(u32,u32),
-        Ball(u32,u32),
-        Stump(u32,u32),
+    // enum Cricket {
+    //     Bat(u32,u32),
+    //     Ball(u32,u32),
+    //     Stump(u32,u32),
+    // }
+
+    // fn main(){
+    //     let  bat = Cricket::Bat(1,3);
+    //     calculate_area(bat);
+    //     let bowl = Cricket::Ball(2,3);
+    //     calculate_area(bowl);
+    //     let stump = Cricket::Stump(3,3);
+    //     calculate_area(stump)
+
+
+    // }
+
+    // fn calculate_area(value : Cricket) -> u32{
+    //   match value {
+    //     Cricket::Ball(a, b) => a * b,
+    //     Cricket::Bat(a ,b) => a -b ,
+    //     Cricket::Stump(a , c ) => a -    c,
+    //   }
+    // }
+
+
+    
+struct Square{
+  width : u32,
+  height : u32,
+}
+
+impl Square {
+    fn area(&self) -> u32{
+     self.width * self.height 
+
+     }
+    fn perimeter(&self ) -> u32{
+      self.height * self.height
     }
 
-    fn main(){
-        let  bat = Cricket::Bat(1,3);
-        calculate_area(bat);
-        let bowl = Cricket::Ball(2,3);
-        calculate_area(bowl);
-        let stump = Cricket::Stump(3,3);
-        calculate_area(stump)
-
-
     }
+fn main(){
+    let square = Square{
+        width : 12,
+        height : 34,
+    };
+    print!("the area of the square {}", square.area());
+        print!("the area of the square {}", square.perimeter())
 
-    fn calculate_area(value : Cricket) -> u32{
-      match value {
-        Cricket::Ball(a, b) => a * b,
-        Cricket::Bat(a ,b) => a -b ,
-        Cricket::Stump(a , c ) => a + c,
-      }
-    }
+}
 
 
 
