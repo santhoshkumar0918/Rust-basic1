@@ -644,30 +644,82 @@
 
 // use rand::seq::index;
 
-enum CustomOption {
-    Some(i32),
-    None
-}
+// enum CustomOption {
+//     Some(i32),
+//     None
+// }
+// fn main(){
+//     let index = firt_string(String::from("hallo"));
+//     match index {
+//     CustomOption::Some(value) => println!("found {}",value),
+//     CustomOption::None => println!("not found ")
+
+//     }
+// }
+
+// fn firt_string(s:String) -> CustomOption{
+//     for (index,c) in s.chars().enumerate(){
+//         if c == 'a'{
+//             return  CustomOption::Some(index as i32);
+//         }    
+
+// }
+//   return  CustomOption::None; 
+// }
+
+
+// fn main(){
+//  let mut vec=  Vec::new();
+//  vec.push(1);
+//  vec.push(2);
+//  vec.push(3);
+ 
+//  let ans  = even_value(&vec);
+//   println!("total vec is {:?}",vec);
+
+//  println!("vec is {:?}",ans)
+
+
+// }
+
+// fn even_value(v :&Vec<i32>) -> Vec<i32>{
+//    let mut new_vec = Vec::new();
+//    for val in v {
+//     if val % 2 != 0{
+//       new_vec.push(*val); 
+
+//     }
+//    }
+//    return  new_vec;
+// }
+
+// use rand::seq::index;
+
+
+
 fn main(){
-    let index = firt_string(String::from("hallo"));
-    match index {
-    CustomOption::Some(value) => println!("found {}",value),
-    CustomOption::None => println!("not found ")
+    let mut vec = Vec::new();
 
+    vec.push(1);
+    vec.push(2);
+    vec.push(3);
+
+    let ans = odd_func(&mut vec);
+    println!("hello {:?}",ans)
+
+}
+
+fn odd_func(vi : &mut Vec<i32>) {
+    let mut i = 0 ;
+    while i < vi.len(){
+        if vi[i] % 2!=0 {
+            vi.remove(i);
+        }else {
+            i +=1;
+        }
     }
+    ;
 }
-
-fn firt_string(s:String) -> CustomOption{
-    for (index,c) in s.chars().enumerate(){
-        if c == 'a'{
-            return  CustomOption::Some(index as i32);
-        }    
-
-}
-  return  CustomOption::None; 
-}
-
-
 
 
 
