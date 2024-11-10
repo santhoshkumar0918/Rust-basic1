@@ -697,28 +697,48 @@
 
 
 
+// fn main(){
+//     let mut vec = Vec::new();
+
+//     vec.push(1);
+//     vec.push(2);
+//     vec.push(3);
+
+//     let ans = odd_func(&mut vec);
+//     println!("hello {:?}",ans)
+
+// }
+
+// fn odd_func(vi : &mut Vec<i32>) {
+//     let mut i = 0 ;
+//     while i < vi.len(){
+//         if vi[i] % 2!=0 {
+//             vi.remove(i);
+//         }else {
+//             i +=1;
+//         }
+//     }
+//     ;
+//
+
+
+//HASHMAPS
+
+use std::collections::HashMap;
+
+
 fn main(){
-    let mut vec = Vec::new();
+    let mut users = HashMap::new();
 
-    vec.push(1);
-    vec.push(2);
-    vec.push(3);
+    users.insert(String::from("he"),32);
+    users.insert(String::from("hello"),33);
 
-    let ans = odd_func(&mut vec);
-    println!("hello {:?}",ans)
+    let first_user = users.get("santhosh");
 
-}
-
-fn odd_func(vi : &mut Vec<i32>) {
-    let mut i = 0 ;
-    while i < vi.len(){
-        if vi[i] % 2!=0 {
-            vi.remove(i);
-        }else {
-            i +=1;
-        }
+    match first_user {
+        Some(a) => println!("Age is {}",a),
+        None => println!("User not found")
     }
-    ;
 }
 
 
