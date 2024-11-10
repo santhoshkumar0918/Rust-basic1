@@ -724,23 +724,43 @@
 
 //HASHMAPS
 
+// use std::collections::HashMap;
+
+
+// fn main(){
+//     let mut users = HashMap::new();
+
+//     users.insert(String::from("he"),32);
+//     users.insert(String::from("hello"),33);
+
+//     let first_user = users.get("santhosh");
+
+//     match first_user {
+//         Some(a) => println!("Age is {}",a),
+//         None => println!("User not found")
+//     }
+// }
+
 use std::collections::HashMap;
 
 
-fn main(){
-    let mut users = HashMap::new();
 
-    users.insert(String::from("he"),32);
-    users.insert(String::from("hello"),33);
 
-    let first_user = users.get("santhosh");
-
-    match first_user {
-        Some(a) => println!("Age is {}",a),
-        None => println!("User not found")
+fn group_values(vec:Vec<(String,i32)>) -> HashMap<String,i32> {
+    let mut _sk = HashMap::new();
+    for (key,val) in vec {
+        _sk.insert(key,val );
     }
+
+    return _sk;
 }
 
+fn main(){
+    let input= vec![(String::from("Hello"),22),(String::from("kello"),35)];
+
+    let _sk = group_values(input);
+    println!("{:?}",_sk)
+}
 
 
 
