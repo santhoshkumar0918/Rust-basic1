@@ -763,6 +763,13 @@
 // }
 
 
+fn main(){
+    let string = String::from("vasanth kabaddi player");
+    let string2 = &string[1..5];
+   
+   
+    print!("{}",string2)
+}
 
 
 
