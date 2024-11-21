@@ -741,26 +741,28 @@
 //     }
 // }
 
-use std::collections::HashMap;
+// use std::collections::HashMap;
 
 
 
 
-fn group_values(vec:Vec<(String,i32)>) -> HashMap<String,i32> {
-    let mut _sk = HashMap::new();
-    for (key,val) in vec {
-        _sk.insert(key,val );
-    }
+// fn group_values(vec:Vec<(String,i32)>) -> HashMap<String,i32> {
+//     let mut _sk = HashMap::new();
+//     for (key,val) in vec {
+//         _sk.insert(key,val );
+//     }
 
-    return _sk;
-}
+//     return _sk;
+// }
 
-fn main(){
-    let input= vec![(String::from("Hello"),22),(String::from("kello"),35)];
+// fn main(){
+//     let input= vec![(String::from("Hello"),22),(String::from("kello"),35)];
 
-    let _sk = group_values(input);
-    println!("{:?}",_sk)
-}
+//     let _sk = group_values(input);
+//     println!("{:?}",_sk)
+// }
+
+
 
 
 
